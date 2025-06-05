@@ -1,3 +1,5 @@
+//Arduino UNO R4
+//Lettura analogica per scrittura su file, lettura di verifica.
 #include <SPI.h>
 #include <SD.h>
 #define ANALOG_PIN A0
