@@ -1,3 +1,5 @@
+//Arduino 
+//Lettura di comandi da seriale tramite menu.
 void setup() {
   Serial.begin(500000);
   while (!Serial);  
@@ -5,7 +7,6 @@ void setup() {
 
 void readFile(const char* fileName) {
   Serial.println("Error opening file.");
-
 }
 
 void readCommand(String &command) {
