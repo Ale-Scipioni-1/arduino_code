@@ -5,18 +5,18 @@ void setup() {
   while (!Serial);  
 }
 
-void readFile(const char* fileName) {
-  Serial.println("Error opening file.");
+void readFile(String &filename) {
+  Serial.println("Error opening file " + String(filename));
 }
 
 void readCommand(String &command) {
   if (Serial.available() > 0) {
     command = Serial.readStringUntil('\n');
-    command.trim();  // remove trailing newline and spaces
+    command.trim(); 
   }
 }
 
-void showMenu(String &command, const char* filename) {
+void showMenu(String &command, String &filename) {
   Serial.println("Select mode:");
   Serial.println(" A Read-filename");
 
@@ -32,8 +32,10 @@ void showMenu(String &command, const char* filename) {
 }
 
 void loop() {
-  const char* filename = "DATALOG.txt";
+  String filename = "DATALOG.txt";
   String command = "";
 
   showMenu(command, filename);
 }
+
+
