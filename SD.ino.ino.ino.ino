@@ -8,10 +8,9 @@ unsigned long lastMillis = 0;
 
 void setup() {
   pinMode(ANALOG_PIN, INPUT);
-  analogReadResolution(14); // (0-16383)
+  analogReadResolution(14);
   
   Serial.begin(500000);
-  // wait for Serial Monitor to connect.
   while (!Serial);
 
   Serial.println("Initializing SD card:");
